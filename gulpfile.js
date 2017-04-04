@@ -3,15 +3,14 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var coffee = require('gulp-coffee');
 
-
 gulp.task('coffee', function(){
-  gulp.src('src/*.coffee')
+  return gulp.src('src/*.coffee')
   .pipe(coffee())
-  .pipe(gulp.dest('src'))
+  .pipe(gulp.dest('src'));
 });
 
 gulp.task('scripts', ['coffee'], function(){
-  gulp.src('src/*.js')
+  return gulp.src('src/*.js')
   .pipe(concat('all.min.js'))
   .pipe(uglify())
   .pipe(gulp.dest('dist'));
