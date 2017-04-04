@@ -1,0 +1,4 @@
+# third.coffee
+
+thirdFunction = ->
+  'third'
