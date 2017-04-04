@@ -15,3 +15,7 @@ gulp.task('scripts', function(){
   .pipe(uglify())
   .pipe(gulp.dest('dist'));
 });
+
+gulp.task('watch', function(){
+  gulp.watch('src/*.{js,coffee}', ['scripts']);
+});
