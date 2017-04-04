@@ -6,6 +6,7 @@ var concat = require('gulp-concat');
 
 gulp.task('scripts', function(){
   gulp.src('src/*.js')
+  .pipe(concat('all.min.js'))
   .pipe(uglify())
   .pipe(gulp.dest('dist'));
 });

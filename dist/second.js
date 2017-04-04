@@ -1,1 +1,0 @@
-function secondFunction(){return"second"}
